@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #F8F8F8;
+}
+
+.one-line {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.spinnerH {
+    height: 90%;
+}
+.home-quill .quill{
+    height:calc(100% - 120px);
+}
+
+.ql-editor{
+    font-size: 18px;
+}
+.ql-toolbar.ql-snow{
+    background-color: white;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+.ql-container.ql-snow{
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+/* .ql-editor {
+    outline:0;
+    background-color: white;
+    height: 200px;
+    border: 1px solid #ECECEC;
+    padding: 10px;
+    border-radius: 14px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    overflow-y: auto;
+}
+
+.ql-toolbar.ql-snow {
+    display: none;
+} */
+
+.chat-container{
+    height: calc(100vh - 94px);
+    overflow-y: scroll;
+    padding-bottom: 170px;
+}
+
+.signUp input::placeholder {
+    color: rgba(0, 0, 0, 0.2);
+    ;
+}
+
+.tox .tox-edit-area__iframe {
+    background-color: transparent !important;
+}
+
+.active,
+.active svg {
+    color: #1565C0;
+    fill: #1565C0;
+}
+
+header a svg,
+header a {
+    fill: #969696;
+    color: #969696;
+}
+
+/* General scrollbar styles */
+*::-webkit-scrollbar {
+    width: 5px;
+    /* height: 80px; */
+}
+
+/* Scrollbar track (background) */
+*::-webkit-scrollbar-track {
+    background: #EDEEF0;
+    border-radius: 5px;
+}
+
+/* Scrollbar thumb (the moving part) */
+*::-webkit-scrollbar-thumb {
+    background: #D2D5D9;
+    border-radius: 5px;
+}
+
+/* Hover effect for the scrollbar thumb */
+*::-webkit-scrollbar-thumb:hover {
+    background: #c7c9ca;
+}
+.bounce {
+    animation: bounce 3s linear infinite;
+  }
+  
+  @media(max-width:1290px){
+    .dashNav p {
+        display: none;
+    }
+  }
+  
+  @media(max-width:960px){
+    .home-quill .quill{
+        height:30vh;
+    }
+    .sidebar {
+        transform: translateX(-200%);
+    }
+  }
+  
+  @media (min-width: 961px) {
+    .sidebar {
+            transform: translateX(0);
+        }
+    }
+    .open {
+            transform: translateX(0) !important;
+    }
+
+
+@keyframes bounce {
+    0%, 100% {
+      transform: scale(1.0);
+    }
+    50% {
+      transform: scale(0.8);
+    }
+  }
